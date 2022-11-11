@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "92f96506-8956-4296-9a15-1005fd3feb50",
+		"name": "NET-apipruebas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5726533"
+	},
+	"item": [
+		{
+			"name": "GETproductos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5153/api/Producto/Lista",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5153",
+					"path": [
+						"api",
+						"Producto",
+						"Lista"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETproductoByID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SAVEproducto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"codigoBarra\": \"10101010\",\r\n  \"descripcion\": \"produto test\",\r\n  \"marca\": \"marca test\",\r\n  \"idCategoria\": 1,\r\n  \"precio\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5153/api/Producto/Guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5153",
+					"path": [
+						"api",
+						"Producto",
+						"Guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATEproducto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idProducto\": 3,\r\n  \"descripcion\": \"produto test actualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5153/api/Producto/Editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5153",
+					"path": [
+						"api",
+						"Producto",
+						"Editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETEproducto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5153/api/Producto/Eliminar/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5153",
+					"path": [
+						"api",
+						"Producto",
+						"Eliminar",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
